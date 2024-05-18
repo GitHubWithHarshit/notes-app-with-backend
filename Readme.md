@@ -1,0 +1,1 @@
+# It is the project belngs to notes-app
