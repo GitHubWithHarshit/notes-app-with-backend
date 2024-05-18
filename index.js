@@ -22,7 +22,7 @@ app.get("/", (req, res)=>{
 
 
 // see details route
-app.get("./file/:filename", (req, res)=>{
+app.get("/file/:filename", (req, res)=>{
     fs.readFile(`./file/${req.params.filename}`, 'utf-8', (err, filedata)=>{
         res.render("show", {filename: req.params.filename, filedata:filedata});
     });
