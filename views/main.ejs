@@ -20,12 +20,12 @@
 
                 <!-- form   -->
                 <form class="flex flex-col items-center text-white" action="/create" method="post">
-                    <input class=" outline-none text-white-800  m-2  px-5 py-2 bg-zinc-800 rounded w-1/2"
+                    <input class="text-3xl outline-none text-white-800  m-2  px-5 py-2 bg-zinc-800 rounded w-1/2"
                         placeholder="Title" type="text" name="title">
                     <textarea
-                        class=" outline-none text-white-800  m-2 px-5 py-2 resize-none bg-zinc-800 rounded-lg w-1/2"
+                        class="text-xl outline-none text-white-800  m-2 px-5 py-2 resize-none bg-zinc-800 rounded-lg w-1/2"
                         placeholder="Write some details" name="details"></textarea>
-                    <input class="m-2 bg-blue-600 px-3 py-1 rounded-lg" value="Create task" type="submit">
+                    <input class="text-xl m-2 bg-blue-600 px-3 py-1 rounded-lg" value="Create task" type="submit">
                 </form>
 
             </div>
@@ -44,7 +44,7 @@
 
                             <div class="flex justify-around">
                                 <a class="text-blue-400 underline" href="/file/<%= task %>">See details</a>
-                                <a class="text-blue-400 underline" href="#">Edit Title</a>
+                                <a class="text-blue-400 underline" href="/edit/<%= task%>">Edit Title</a>
                             </div>
 
                         </div>

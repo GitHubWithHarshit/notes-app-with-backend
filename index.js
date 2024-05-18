@@ -28,6 +28,22 @@ app.get("/file/:filename", (req, res)=>{
     });
 });
 
+
+
+// get edit route
+app.get("/edit/:filename", (req, res)=>{
+    res.render("edit", {filename:req.params.filename});
+});
+
+
+// post edit route
+app.post("/edit", function(req, res){
+    fs.rename(`./file/${req.body.previous}` , `./file/${req.body.new}`, function(err){
+        res.redirect("/")
+    });
+})
+
+
 // notes create route
 app.post("/create", (req, res)=>{
     fs.writeFile(`./file/${req.body.title.split(' ').join('')}.txt`, req.body.details, (err)=>{
